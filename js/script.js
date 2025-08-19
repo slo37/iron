@@ -1,13 +1,157 @@
-// IRON Welding Company - JavaScript Functionality
+// Wait for DOM to be loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (mobileToggle && navMenu) {
+        mobileToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('mobile-active');
+            mobileToggle.classList.toggle('active');
+        });
+    }
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Initialize all functionality
-    //initializeNavigation();
-    initializeAnimations();
-    initializeContactForm();
-    initializeMobileMenu();
-    initializeProductSlider(); // Add this line
-    initializeScrollEffects();
+    // Product showcase slider
+    const slides = document.querySelectorAll('.product-slide');
+    const indicators = document.querySelectorAll('.indicator');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    let currentSlide = 0;
+
+    function showSlide(n) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        indicators.forEach(indicator => indicator.classList.remove('active'));
+        
+        if (slides[n]) {
+            slides[n].classList.add('active');
+        }
+        if (indicators[n]) {
+            indicators[n].classList.add('active');
+        }
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    // Event listeners for slider controls
+    if (nextBtn) {
+        nextBtn.addEventListener('click', nextSlide);
+    }
+    
+    if (prevBtn) {
+        prevBtn.addEventListener('click', prevSlide);
+    }
+
+    // Indicator clicks
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            currentSlide = index;
+            showSlide(currentSlide);
+        });
+    });
+
+    // Auto-play slider
+    if (slides.length > 0) {
+        setInterval(nextSlide, 5000);
+        showSlide(0); // Show first slide initially
+    }
+
+    // Product detail image gallery
+    const mainImage = document.querySelector('.main-product-image');
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    const galleryPrev = document.querySelector('.gallery-prev');
+    const galleryNext = document.querySelector('.gallery-next');
+    let currentImageIndex = 0;
+
+    if (thumbnails.length > 0) {
+        // Set initial active thumbnail
+        thumbnails[0].classList.add('active');
+
+        thumbnails.forEach((thumbnail, index) => {
+            thumbnail.addEventListener('click', () => {
+                if (mainImage) {
+                    mainImage.src = thumbnail.src;
+                }
+                thumbnails.forEach(t => t.classList.remove('active'));
+                thumbnail.classList.add('active');
+                currentImageIndex = index;
+            });
+        });
+
+        if (galleryPrev) {
+            galleryPrev.addEventListener('click', () => {
+                currentImageIndex = (currentImageIndex - 1 + thumbnails.length) % thumbnails.length;
+                thumbnails[currentImageIndex].click();
+            });
+        }
+
+        if (galleryNext) {
+            galleryNext.addEventListener('click', () => {
+                currentImageIndex = (currentImageIndex + 1) % thumbnails.length;
+                thumbnails[currentImageIndex].click();
+            });
+        }
+    }
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Contact form handling
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Simple validation
+            if (!data.name || !data.email || !data.message) {
+                alert('Veuillez remplir tous les champs obligatoires.');
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(data.email)) {
+                alert('Veuillez entrer une adresse email valide.');
+                return;
+            }
+            
+            // Simulate form submission
+            alert('Merci pour votre message ! Nous vous contacterons bientôt.');
+            this.reset();
+        });
+    }
+
+    // Add scroll effect to header
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('.header');
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
 });
 
 // Navigation functionality
