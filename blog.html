@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - IRON Welding Company</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-contact">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Adresse : Hammem Sousse</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>Tel : +216 53 583 583</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email : Contact@iron.tn</span>
+                    </div>
+                </div>
+                <div class="header-social">
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="images/logo-2.png" alt="IRON Logo" style="width: 100%; height: auto;">
+                    </div>
+                    <div class="logo-text">
+                        <span class="company-name">IRON</span>
+                        <span class="company-tagline">WELDING COMPANY</span>
+                    </div>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">HOME</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="products.html" class="nav-link">Product</a></li>
+                    <li><a href="partnaire.html" class="nav-link">Parteniers</a></li>
+                    <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <a href="#" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i>
+                    Discutez sur WhatsApp
+                </a>
+                
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1 class="hero-title">Blog</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Blog</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="blog-content">
+        <div class="container">
+            <div class="blog-layout">
+                <!-- Main Content -->
+                <div class="blog-main">
+                    <article class="blog-post">
+                        <div class="post-image">
+                            <img src="images/mig-mma-machine.jpg" alt="Welding Machine">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <i class="fas fa-cogs"></i>
+                                <h2>Comment choisir la bonne machine à souder pour votre activité</h2>
+                            </div>
+                            <p>Choisir la machine à souder adaptée à vos besoins professionnels peut faire toute la différence en matière de qualité, de productivité et de sécurité. Il est important de considérer plusieurs critères : le type de soudure souhaité (MIG, TIG ou à l'arc), la fréquence d'utilisation, la puissance nécessaire, et le type de matériaux que vous allez souder. Une machine bien choisie vous permettra d'obtenir des soudures propres et durables, tout en garantissant un travail efficace. N'hésitez pas à demander conseil à des professionnels ou à comparer les caractéristiques techniques pour faire le meilleur choix.</p>
+                        </div>
+                    </article>
+
+                    <!-- Comment Section -->
+                    <div class="comment-section">
+                        <div class="comment-prompt">
+                            <p>Si vous avez des questions, n'hésitez pas à nous envoyer un message</p>
+                            <p class="comment-subtitle">Laisser un commentaire</p>
+                        </div>
+                        
+                        <form class="comment-form">
+                            <div class="form-group">
+                                <label for="comment">Commentaire</label>
+                                <textarea id="comment" name="comment" placeholder="Commentaire" rows="6"></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="name">Nom</label>
+                                <input type="text" id="name" name="name" placeholder="Nom">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Email">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company">Entreprise</label>
+                                <input type="text" id="company" name="company" placeholder="Entreprise">
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">Poste commentaire</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="blog-sidebar">
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title">
+                            <i class="fas fa-edit"></i>
+                            Latest Post
+                        </h3>
+                        
+                        <div class="latest-posts">
+                            <article class="latest-post">
+                                <div class="post-thumb">
+                                    <img src="images/welding-wire.jpg" alt="Welding Wire">
+                                </div>
+                                <div class="post-info">
+                                    <h4>Best Solutions for Construction and Repairs</h4>
+                                    <span class="post-date">Mai 28 2025</span>
+                                </div>
+                            </article>
+                            
+                            <article class="latest-post">
+                                <div class="post-thumb">
+                                    <img src="images/portable-power.jpg" alt="Portable Power">
+                                </div>
+                                <div class="post-info">
+                                    <h4>Best Solutions for Construction and Repairs</h4>
+                                    <span class="post-date">Mai 28 2025</span>
+                                </div>
+                            </article>
+                            
+                            <article class="latest-post">
+                                <div class="post-thumb">
+                                    <img src="images/iron-box.jpg" alt="Iron Box">
+                                </div>
+                                <div class="post-info">
+                                    <h4>Best Solutions for Construction and Repairs</h4>
+                                    <span class="post-date">Mai 28 2025</span>
+                                </div>
+                            </article>
+                            
+                            <article class="latest-post">
+                                <div class="post-thumb">
+                                    <img src="images/mig-mma-machine.jpg" alt="MIG MMA Machine">
+                                </div>
+                                <div class="post-info">
+                                    <h4>Best Solutions for Construction and Repairs</h4>
+                                    <span class="post-date">Mai 28 2025</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo">
+                            <div class="logo-icon">
+                                <img src="images/logo-2.png" alt="IRON Logo" style="width: 100%; height: auto;">
+                            </div>
+                            <div class="logo-text">
+                                <span class="company-name">IRON</span>
+                                <span class="company-tagline">WELDING COMPANY</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Explorez notre gamme de produits ou contactez-nous pour obtenir des conseils personnalisés
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">À propos de nous</a></li>
+                        <li><a href="#">Découvrez notre équipe</a></li>
+                        <li><a href="#">Notre projet</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Adresse : Hammem Sousse</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>Tel : +216 53 583 583</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email : Contact@iron.tn</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js" type="module"></script>
+</body>
+</html>
