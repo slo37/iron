@@ -999,8 +999,16 @@ body {
 }
 
 .footer-main {
-    background: #95a5a6;
+    background: #868D94;
     padding: 50px 0 30px;
+}
+
+.egle-footer {
+    background-image: url('../images/egle.png');
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 300px auto;
+    position: relative;
 }
 
 .footer-content {
@@ -1013,12 +1021,12 @@ body {
 .footer-title {
     font-size: 18px;
     font-weight: 600;
-    color: #2c3e50;
+    color: white;
     margin-bottom: 20px;
 }
 
 .footer-description {
-    color: #7f8c8d;
+    color: white;
     margin: 20px 0;
     line-height: 1.6;
 }
@@ -1055,22 +1063,22 @@ body {
 }
 
 .footer-links a {
-    color: #7f8c8d;
+    color: white;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: #2c3e50;
+    color: white;
 }
 
 .footer-contact .contact-item {
     margin-bottom: 15px;
-    color: #7f8c8d;
+    color: white;
 }
 
 .footer-contact .contact-item i {
-    color: #2c3e50;
+    color: white;
     width: 20px;
 }
 
@@ -1098,6 +1106,12 @@ body {
     .testimonials-grid {
         grid-template-columns: 1fr;
     }
+
+    .footer .logo, .footer-social, .contact-item {
+        justify-content: center;
+    }
+
+
 }
 
 @media (max-width: 768px) {
@@ -1410,7 +1424,7 @@ body {
 
 .contact-info {
     padding: 80px 0;
-    background: #f8f9fa;
+    background: #868D944D;
 }
 
 .contact-cards {
@@ -1419,8 +1433,13 @@ body {
     gap: 30px;
 }
 
+.input-contact {
+    border-radius: 0 !important;
+    border: solid 2px #1D2D3C !important;
+}
+
 .contact-card {
-    background: white;
+    background: #EBEBEB;
     padding: 40px 30px;
     border-radius: 10px;
     text-align: center;
@@ -1483,7 +1502,7 @@ body {
 
 .contact-form-section {
     padding: 100px 0;
-    background: white;
+    background: #868D944D;
 }
 
 .contact-form-content {
@@ -1536,7 +1555,7 @@ body {
     background: #f8f9fa;
     border-radius: 10px;
     overflow: hidden;
-    height: 400px;
+    height: 100%;
 }
 
 .map-placeholder {
@@ -1829,7 +1848,7 @@ body {
     cursor: pointer;
     border: 2px solid transparent;
     transition: border-color 0.3s ease;
-    background: #f8f9fa;
+    background: #4685C833;
     padding: 0.3rem;
 }
 
@@ -2758,10 +2777,6 @@ body {
     transform: scale(0.8);
 }
 
-.footer-main {
-    background: #95a5a6;
-    padding: 50px 0 30px;
-}
 
 .footer-content {
     display: grid;
@@ -2773,12 +2788,12 @@ body {
 .footer-title {
     font-size: 18px;
     font-weight: 600;
-    color: #2c3e50;
+    color: white;
     margin-bottom: 20px;
 }
 
 .footer-description {
-    color: #7f8c8d;
+    color: white;
     margin: 20px 0;
     line-height: 1.6;
 }
@@ -2815,25 +2830,25 @@ body {
 }
 
 .footer-links a {
-    color: #7f8c8d;
+    color: white;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: #2c3e50;
+    color: white;
 }
 
 .footer-contact .contact-item {
     margin-bottom: 15px;
-    color: #7f8c8d;
+    color: white;
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
 .footer-contact .contact-item i {
-    color: #2c3e50;
+    color: white;
     width: 20px;
 }
 
@@ -2969,6 +2984,8 @@ body {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .breadcrumb {
@@ -2994,28 +3011,26 @@ body {
 }
 
 .blog-content {
-    padding: 80px 0;
     background: #f8f9fa;
 }
 
 .blog-layout {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
     gap: 60px;
     align-items: start;
 }
 
 .blog-post {
-    background: white;
-    border-radius: 12px;
+    background: #EBEBEB;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 600px;
 }
 
 .post-image img {
     width: 100%;
-    height: 300px;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -3050,9 +3065,9 @@ body {
 
 .comment-section {
     background: rgba(52, 152, 219, 0.1);
-    padding: 40px;
+    padding: 30px;
     border-radius: 12px;
-    margin-top: 30px;
+    height: 670px;
 }
 
 .comment-prompt {
@@ -3131,12 +3146,10 @@ body {
 
 .blog-sidebar {
     background: white;
-    border-radius: 12px;
     padding: 30px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    height: fit-content;
-    position: sticky;
     top: 100px;
+    height: 670px;
 }
 
 .sidebar-title {
@@ -3173,12 +3186,19 @@ body {
     padding-bottom: 0;
 }
 
+p.text-ling-slo {
+    line-height: 2.8;
+    padding: 20px;
+}
+
 .post-thumb {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 8px;
     overflow: hidden;
     flex-shrink: 0;
+    background: #87B4D14D;
+    padding: 10px;
 }
 
 .post-thumb img {
@@ -3202,7 +3222,7 @@ body {
 
 /* Partners Styles */
 .partners-hero {
-    background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+    background: #868D94;
     padding: 150px 0 80px;
     position: relative;
     overflow: hidden;
@@ -3321,8 +3341,8 @@ body {
 }
 
 .partners-content {
-    padding: 80px 0;
     background: white;
+    height: 600px;
 }
 
 .partners-layout {
@@ -3433,17 +3453,16 @@ body {
     object-fit: contain;
 }
 
-.partners-sidebar {
-    position: sticky;
-    top: 100px;
+.partner-logo-suffix {
+    height: 160px !important;
 }
 
 .cta-card {
     background: #2c3e50;
     color: white;
     padding: 40px;
-    border-radius: 12px;
     text-align: center;
+    height: 600px;
 }
 
 .cta-card h3 {
@@ -3554,15 +3573,42 @@ body {
     font-size: 14px;
 }
 
+.blog-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 /* Blog and Partners Mobile Styles */
 @media (max-width: 1024px) {
     .blog-layout, .partners-layout {
+        display: grid;
         grid-template-columns: 1fr;
         gap: 40px;
     }
 
+    .blog-main {
+        display: block;
+    }
+
+    .blog-post {
+        display: block;
+        height: auto;
+    }
+
     .blog-sidebar, .partners-sidebar {
         position: static;
+        height: auto;
+        order: 2;
+    }
+
+    .partners-main {
+        order: 1;
+    }
+
+    /* Ensure proper spacing and prevent conflicts */
+    .partners-content {
+        padding: 60px 0;
+        height: auto;
     }
 
     .partners-grid {
@@ -3571,6 +3617,31 @@ body {
 
     .testimonials-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    /* Enhanced testimonials section spacing */
+    .testimonials {
+        margin-top: 40px;
+        clear: both;
+    }
+
+    /* Partners page hero mobile improvements */
+    .partners-hero-content {
+        padding: 20px 0;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        max-width: 300px;
+        padding: 15px 25px;
+        font-size: 16px;
     }
 }
 
@@ -3581,16 +3652,32 @@ body {
 
     .partners-hero-content {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 30px;
         text-align: center;
+        padding: 30px 0;
     }
 
     .hero-actions {
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        max-width: 280px;
+        padding: 16px 24px;
+        font-size: 16px;
+        font-weight: 600;
+        min-height: 50px;
+        display: flex;
+        align-items: center;
         justify-content: center;
     }
 
     .comment-section {
         padding: 20px;
+        height: auto;
     }
 
     .partners-grid {
@@ -3602,12 +3689,14 @@ body {
     /* Partnaire page - 2 columns on tablet */
     .partners-main .partners-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
+        gap: 25px;
+        padding: 0 10px;
     }
 
     .testimonials-grid {
         grid-template-columns: 1fr;
         gap: 20px;
+        padding: 0 10px;
     }
 
     /* Mobile responsive for partners */
@@ -3620,26 +3709,221 @@ body {
     .partner-logo {
         width: 100%;
         max-width: 280px;
-        height: 60px;
-        padding: 10px 15px;
+        height: 70px;
+        padding: 15px 20px;
+        margin: 0 auto;
     }
 
     /* Partnaire page mobile - single column */
     .partners-main .partners-grid {
         grid-template-columns: 1fr;
         gap: 20px;
+        max-width: 350px;
+        margin: 0 auto;
     }
 
     .partners-main .partner-logo {
         width: 100%;
-        height: 70px;
+        height: 80px !important;
+        padding: 15px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .partners-main .partner-logo:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .hero-description h2 {
+        font-size: 1.75rem;
+        line-height: 1.3;
+        margin-bottom: 15px;
+    }
+
+    .hero-description p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    /* Partners sidebar mobile */
+    .partners-sidebar {
+        margin-top: 30px;
+        padding: 0 20px;
+    }
+
+    /* Enhanced CTA card styling for better mobile experience */
+    .cta-card {
+        color: white;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+        border: none;
+    }
+
+    .cta-card h3 {
+        color: white;
+    }
+
+    .cta-card {
+        padding: 25px;
+        text-align: center;
+    }
+
+    .cta-card h3 {
+        font-size: 18px;
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+
+    .cta-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 28px;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 16px;
+        min-height: 50px;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .cta-link:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Testimonials mobile improvements */
+    .testimonials {
+        padding: 50px 0;
+        margin-top: 30px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .testimonials .section-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .testimonial-card {
+        padding: 25px 20px;
+        margin-bottom: 20px;
+    }
+
+    .testimonial-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .testimonial-logo {
+        align-self: center;
+        width: 50px;
+        height: 50px;
+    }
+
+    .testimonial-info {
+        text-align: center;
+    }
+
+    .testimonial-text {
+        text-align: center;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra small mobile devices */
+    .partners-hero {
+        padding: 40px 0;
+    }
+
+    .page-title {
+        font-size: 2rem;
     }
 
     .hero-description h2 {
         font-size: 1.5rem;
     }
 
+    .hero-description p {
+        font-size: 15px;
+    }
+
+    .partners-main .partners-grid {
+        max-width: 280px;
+        gap: 15px;
+    }
+
+    .partners-main .partner-logo {
+        height: 70px !important;
+        padding: 12px;
+    }
+
     .section-title {
-        font-size: 2rem;
+        font-size: 1.75rem;
+    }
+
+    .hero-actions .btn {
+        max-width: 250px;
+        padding: 14px 20px;
+        font-size: 15px;
+    }
+
+    .cta-card {
+        padding: 20px 15px;
+        margin: 0 10px;
+    }
+
+    .cta-card h3 {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .cta-link {
+        padding: 12px 24px;
+        font-size: 15px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .testimonial-card {
+        padding: 20px 15px;
+        margin: 0 10px 15px 10px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        background: white;
+    }
+
+    .testimonials .section-title {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+
+    /* Enhanced mobile spacing */
+    .partners-sidebar {
+        padding: 0 15px;
+        margin-top: 25px;
+    }
+
+    .testimonials {
+        padding: 40px 0;
+        margin-top: 25px;
     }
 }
