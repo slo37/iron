@@ -740,6 +740,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     width: 100%;
+    text-decoration: none;
     margin-top: auto;
 }
 
