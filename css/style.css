@@ -873,6 +873,13 @@ body {
     font-size: 14px;
 }
 
+@media (max-width: 768px) {
+    .testimonial-rating {
+        display: flex;
+        justify-content: center;
+    }
+}
+
 .testimonial-text {
     color: #7f8c8d;
     font-size: 14px;
@@ -3889,6 +3896,12 @@ p.text-ling-slo {
     .cta-card {
         padding: 20px 15px;
         margin: 0 10px;
+        height: 180px;
+    }
+
+    .testimonial-info .rating {
+        display: flex;
+        justify-content: center;
     }
 
     .cta-card h3 {
