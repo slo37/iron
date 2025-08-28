@@ -429,6 +429,7 @@ body {
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .hero-btn:hover {
@@ -1132,6 +1133,7 @@ body {
 
     .mobile-toggle {
         display: flex;
+        margin-left: 5px;
     }
 
     .hero-title {
@@ -3587,6 +3589,16 @@ p.text-ling-slo {
 
 /* Blog and Partners Mobile Styles */
 @media (max-width: 1024px) {
+
+    .nav-actions {
+        display: flex;
+        align-items: anchor-center;
+    }
+
+    .whatsapp-btn {
+        margin-right: 5px;
+    }
+
     .blog-layout, .partners-layout {
         display: grid;
         grid-template-columns: 1fr;
