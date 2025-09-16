@@ -27,12 +27,14 @@ project/
 ## 🚀 Fonctionnalités
 
 ### ✅ Design Professionnel
+
 - Interface moderne et responsive
 - Couleurs IRON (bleu marine + vert accent)
 - Logo personnalisé avec symbole diamant + éclair
 - Typographie professionnelle (Inter)
 
 ### ✅ Sections Complètes
+
 - **Header** : Navigation + contact + WhatsApp
 - **Hero** : Message d'accueil + produit vedette
 - **À Propos** : "Pourquoi nous choisir" + équipements
@@ -43,6 +45,7 @@ project/
 - **Footer** : Partenaires + liens + coordonnées
 
 ### ✅ Interactivité JavaScript
+
 - Navigation smooth scroll
 - Animations au scroll
 - Formulaire de contact avec validation
@@ -52,6 +55,7 @@ project/
 - Notifications toast
 
 ### ✅ Optimisations
+
 - SEO optimisé (meta tags, alt text)
 - Performance (lazy loading, animations CSS)
 - Mobile-first responsive design
@@ -81,7 +85,7 @@ project/
 
 ## 📞 Contact
 
-- **Téléphone** : +216 53 583 583
+- **Téléphone** : +216 53 348 000
 - **Email** : Contact@iron.tn
 - **Adresse** : Hammem Sousse
 - **WhatsApp** : Bouton direct intégré
@@ -96,7 +100,9 @@ project/
 ## 📝 Personnalisation
 
 ### Modifier les couleurs
+
 Éditer les variables CSS dans `css/style.css` :
+
 ```css
 :root {
   --primary-color: #2c3e50;
@@ -106,9 +112,11 @@ project/
 ```
 
 ### Ajouter des produits
+
 Dupliquer une `.product-card` dans `index.html` et ajuster le contenu.
 
 ### Modifier l'équipe
+
 Remplacer les images dans le dossier `images/` et mettre à jour les noms dans `index.html`.
 
 ---
