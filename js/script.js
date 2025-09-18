@@ -1,11 +1,11 @@
 // Wait for DOM to be loaded
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Mobile menu toggle
     const mobileToggle = document.querySelector('.mobile-toggle');
     const navMenu = document.querySelector('.nav-menu');
-    
+
     if (mobileToggle && navMenu) {
-        mobileToggle.addEventListener('click', function() {
+        mobileToggle.addEventListener('click', function () {
             navMenu.classList.toggle('mobile-active');
             mobileToggle.classList.toggle('active');
         });
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function showSlide(n) {
         slides.forEach(slide => slide.classList.remove('active'));
         indicators.forEach(indicator => indicator.classList.remove('active'));
-        
+
         if (slides[n]) {
             slides[n].classList.add('active');
         }
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (nextBtn) {
         nextBtn.addEventListener('click', nextSlide);
     }
-    
+
     if (prevBtn) {
         prevBtn.addEventListener('click', prevSlide);
     }
@@ -117,26 +117,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // Contact form handling
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             // Get form data
             const formData = new FormData(this);
             const data = Object.fromEntries(formData);
-            
+
             // Simple validation
             if (!data.name || !data.email || !data.message) {
                 alert('Veuillez remplir tous les champs obligatoires.');
                 return;
             }
-            
+
             // Email validation
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(data.email)) {
                 alert('Veuillez entrer une adresse email valide.');
                 return;
             }
-            
+
             // Simulate form submission
             alert('Merci pour votre message ! Nous vous contacterons bientôt.');
             this.reset();
@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Add scroll effect to header
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         const header = document.querySelector('.header');
         if (window.scrollY > 100) {
             header.classList.add('scrolled');
@@ -710,7 +710,7 @@ console.log(`
 📱 Compatible mobile et desktop
 🚀 Optimisé pour les performances
 
-Contact: +216 53 583 583
+Contact: +216 53 348 000
 Email: Contact@iron.tn
 `);
 
