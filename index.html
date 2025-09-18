@@ -374,22 +374,23 @@
     <div class="container">
         <div class="contact-content">
             <h2 class="contact-title">Contacte Nous</h2>
-            <form class="contact-form">
+            <form class="contact-form" id="indexContactForm">
                 <div class="form-row">
                     <div class="form-group">
-                        <input placeholder="Prénom & Nom" required type="text">
+                        <input id="index_prenom" name="prenom" placeholder="Prénom & Nom" required type="text">
                     </div>
                     <div class="form-group">
-                        <input placeholder="Email" required type="email">
+                        <input id="index_email" name="email" placeholder="Email" required type="email">
                     </div>
                     <div class="form-group">
-                        <input placeholder="Addresse" type="text">
+                        <input id="index_address" name="address" placeholder="Addresse" type="text">
                     </div>
                 </div>
                 <div class="form-group">
-                    <textarea placeholder="Message" required rows="8"></textarea>
+                    <textarea id="index_message" name="message" placeholder="Message" required rows="8"></textarea>
                 </div>
                 <button class="submit-btn" type="submit">Envoyer le message</button>
+                <div id="indexContactResponse" class="response-message" style="display: none;"></div>
             </form>
         </div>
     </div>
@@ -477,5 +478,6 @@
 </footer>
 
 <script src="js/script.js" type="module"></script>
+<script src="js/send_email.js"></script>
 </body>
 </html>

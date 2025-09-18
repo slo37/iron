@@ -38,7 +38,7 @@ function sendFormData(formData, responseElementId) {
     });
 }
 
-// Gestionnaire pour le formulaire de contact
+// Gestionnaire pour le formulaire de contact (page contact.html)
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.querySelector('.contact-page-form');
     if (contactForm) {
@@ -69,6 +69,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Envoyer les données
             sendFormData(formData, 'contactResponse');
+        });
+    }
+
+    // Gestionnaire pour le formulaire de contact (page index.html)
+    const indexContactForm = document.getElementById('indexContactForm');
+    if (indexContactForm) {
+        indexContactForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Récupérer les valeurs des champs
+            const prenom = document.getElementById('index_prenom').value.trim();
+            const email = document.getElementById('index_email').value.trim();
+            const address = document.getElementById('index_address').value.trim();
+            const message = document.getElementById('index_message').value.trim();
+
+            // Vérifier les champs obligatoires
+            if (!prenom || !email || !message) {
+                showMessage('indexContactResponse', 'Le nom, l\'email et le message sont obligatoires.');
+                return;
+            }
+
+            // Créer l'objet de données à envoyer
+            const formData = new FormData();
+            formData.append('form_type', 'index_contact');
+            formData.append('prenom', prenom);
+            formData.append('email', email);
+            formData.append('address', address);
+            formData.append('message', message);
+
+            // Envoyer les données
+            sendFormData(formData, 'indexContactResponse');
         });
     }
 

@@ -79,6 +79,58 @@ function getContactEmailTemplate($prenom, $entreprise, $email, $phone, $message)
     </html>";
 }
 
+function getIndexContactEmailTemplate($prenom, $email, $address, $message)
+{
+    return "
+    <!DOCTYPE html>
+    <html lang='fr'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <style>
+            body { font-family: 'Inter', Arial, sans-serif; background-color: #f8f9fa; margin: 0; padding: 0; }
+            .email-container { max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); overflow: hidden; }
+            .header { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; padding: 30px 20px; text-align: center; }
+            .header h2 { margin: 0; font-size: 28px; font-weight: 600; }
+            .header .logo { margin-bottom: 10px; }
+            .content { padding: 30px; }
+            .content h3 { font-size: 22px; margin-bottom: 15px; color: #e74c3c; }
+            .content p { font-size: 16px; color: #555; line-height: 1.8; margin-bottom: 12px; }
+            .content strong { color: #e74c3c; font-weight: 600; }
+            .info-box { background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #e74c3c; }
+            .footer { background-color: #e74c3c; color: #ecf0f1; text-align: center; padding: 20px; font-size: 14px; }
+            .footer a { color: #ffffff; text-decoration: none; }
+        </style>
+    </head>
+    <body>
+        <div class='email-container'>
+            <div class='header'>
+                <div class='logo'>
+                    <strong>IRON WELDING COMPANY</strong>
+                </div>
+                <h2>Contact depuis la Page d'Accueil</h2>
+            </div>
+            <div class='content'>
+                <h3>Bonjour,</h3>
+                <p>Vous avez reçu une nouvelle demande de contact depuis la page d'accueil de votre site web. Voici les détails :</p>
+                <div class='info-box'>
+                    <p><strong>Nom & Prénom :</strong> $prenom</p>
+                    <p><strong>Email :</strong> $email</p>
+                    <p><strong>Adresse :</strong> " . ($address ?: 'Non spécifiée') . "</p>
+                    <p><strong>Message :</strong></p>
+                    <p style='background: white; padding: 15px; border-radius: 6px; border: 1px solid #ddd;'>$message</p>
+                </div>
+                <p>Cette demande provient du formulaire de contact de la page d'accueil. Veuillez contacter ce prospect dans les plus brefs délais.</p>
+            </div>
+            <div class='footer'>
+                <p>&copy; " . date('Y') . " IRON Welding Company. Tous droits réservés.</p>
+                <p>Email : Contact@iron.tn | Tél : +216 53 348 000</p>
+            </div>
+        </div>
+    </body>
+    </html>";
+}
+
 function getBlogEmailTemplate($name, $email, $company, $comment)
 {
     return "
@@ -191,6 +243,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         $subject = 'Nouvelle demande de contact - IRON Welding Company';
         $body = getContactEmailTemplate($prenom, $entreprise, $email, $phone, $message);
+        $fullName = $prenom;
+        
+    } elseif ($formType === 'index_contact') {
+        // Formulaire de contact depuis la page d'accueil
+        $prenom = htmlspecialchars($_POST['prenom'] ?? null);
+        $address = htmlspecialchars($_POST['address'] ?? '');
+        $message = htmlspecialchars($_POST['message'] ?? null);
+        
+        if (!$prenom || !$message) {
+            echo json_encode(['status' => 'error', 'message' => 'Le nom et le message sont obligatoires']);
+            exit;
+        }
+        
+        $subject = 'Contact depuis la page d\'accueil - IRON Welding Company';
+        $body = getIndexContactEmailTemplate($prenom, $email, $address, $message);
         $fullName = $prenom;
         
     } elseif ($formType === 'blog') {
