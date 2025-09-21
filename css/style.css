@@ -966,6 +966,13 @@ body {
     margin: 0 auto;
 }
 
+.form-row-contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
 .form-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
