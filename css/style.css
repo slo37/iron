@@ -3279,6 +3279,12 @@ p.text-ling-slo {
     object-fit: cover;
 }
 
+.post-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 .post-info h4 {
     color: #2c3e50;
     font-size: 14px;
