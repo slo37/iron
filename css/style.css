@@ -1434,7 +1434,7 @@ body.rtl .whatsapp-btn span {
         box-shadow: none !important;
         border: none !important;
     }
-    
+
     .language-selector-mobile .dropdown-menu.show {
         transform: translateX(-50%) translateY(0) !important;
         opacity: 1 !important;
@@ -1485,7 +1485,7 @@ body.rtl .whatsapp-btn span {
         right: auto !important;
         transform: translateX(-50%) !important;
     }
-    
+
     body.rtl .language-selector-mobile .dropdown-menu.show {
         transform: translateX(-50%) translateY(0) !important;
     }
@@ -2950,6 +2950,10 @@ body.rtl .whatsapp-btn span {
 
 .products-grid-listing .product-item:nth-child(8) {
     background-color: rgba(49, 119, 165, 0.80);
+}
+
+.products-grid-listing .product-item:nth-child(9) {
+    background-color: rgba(49, 119, 165, 0.90);
 }
 
 .product-item:hover {

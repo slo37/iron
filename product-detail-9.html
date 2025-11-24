@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>IRON Advanced Laser Welding System - IRON Welding Company</title>
+    <meta content="IRON Advanced Laser Welding System - Machine de soudage laser professionnelle de haute précision pour applications industrielles avancées."
+          name="description">
+    <link href="images/logo-2.png" rel="icon" type="image/png">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+    <div class="header-top">
+        <div class="container">
+            <div class="header-contact">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span data-i18n="header.address">Adresse : Hammem Sousse</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span data-i18n="header.phone">Tel : +216 53 348 000</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span data-i18n="header.email">Email : Contact@iron.tn</span>
+                </div>
+            </div>
+            <div class="header-social">
+                <a class="social-link"
+                   href="https://www.facebook.com/people/Iron-Equipement-Industriel/pfbid0wyjUP6wVyzixEU6XdVCnra2QegrPXoUKGs1g7tD2MxWXNbX1v1Tqz2bqTY1STPuUl/"
+                   target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a class="social-link" href="https://www.instagram.com/ironequipementindustriel" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                <a class="social-link" href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a class="social-link" href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="language-selector">
+                <button class="btn-language" id="languageDropdown" type="button">
+                    <span class="flag-icon current-flag">🇫🇷</span>
+                    <span class="lang-text current-lang">FR</span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item lang-option active" data-lang="fr" href="#">
+                            <span class="flag-icon">🇫🇷</span>
+                            <span class="lang-name">Français</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item lang-option" data-lang="en" href="#">
+                            <span class="flag-icon">🇬🇧</span>
+                            <span class="lang-name">English</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item lang-option" data-lang="ar" href="#">
+                            <span class="flag-icon">🇦🇪</span>
+                            <span class="lang-name">العربية</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo">
+                    <img alt="Logo" src="images/hedear-logo.png" style="width: 150px">
+                </div>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a class="nav-link" data-i18n="nav.home" href="./index.html">Home</a></li>
+                <li><a class="nav-link" data-i18n="nav.about" href="./about.html">About</a></li>
+                <li><a class="nav-link active" data-i18n="nav.product" href="./products.html">Product</a></li>
+                <li><a class="nav-link" data-i18n="nav.partners" href="./partnaire.html">Parteniers</a></li>
+                <li><a class="nav-link" data-i18n="nav.blog" href="./blog.html">Blog</a></li>
+                <li><a class="nav-link" data-i18n="nav.contact" href="./contact.html">Contact</a></li>
+            </ul>            <!-- Mobile Language Selector -->
+            <div class="language-selector-mobile">
+                <button class="btn-language" id="languageDropdownMobile" type="button">
+                    <span class="flag-icon current-flag">🇫🇷</span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item lang-option active" data-lang="fr" href="#">
+                            <span class="flag-icon">🇫🇷</span>
+                            <span class="lang-name">Français</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item lang-option" data-lang="en" href="#">
+                            <span class="flag-icon">🇬🇧</span>
+                            <span class="lang-name">English</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item lang-option" data-lang="ar" href="#">
+                            <span class="flag-icon">🇦🇪</span>
+                            <span class="lang-name">العربية</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="nav-actions">
+                <a class="whatsapp-btn" href="https://wa.me/21653348000" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <span><span data-i18n="header.whatsapp">Discutez sur</span> <span data-i18n="header.whatsappBtn">WhatsApp</span></span>
+                </a>
+                <div class="mobile-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <div class="page-header-content">
+            <h1 class="page-title" data-i18n="nav.product">Products</h1>
+            <div class="breadcrumb">
+                <a data-i18n="breadcrumb.home" href="./index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <span data-i18n="nav.product">Products</span>
+            </div>
+        </div>
+        <div class="page-header-decoration">
+            <i class="fas fa-tools"></i>
+        </div>
+    </div>
+</section>
+
+<!-- Product Detail Section -->
+<section class="product-detail">
+    <div class="product-detail-content">
+        <div class="product-detail-image">
+            <div class="product-gallery">
+                <img alt="IRON Advanced Laser Welding System" class="main-product-image"
+                     src="images/pp7-7.png">
+                <div class="product-thumbnails">
+                    <img alt="Vue principale" class="thumbnail active" src="images/pp7-7.png">
+                    <img alt="Vue latérale" class="thumbnail" src="images/pp8-2.png">
+                    <img alt="Vue arrière" class="thumbnail" src="images/pp8-3.png">
+                    <img alt="Détails" class="thumbnail" src="images/pp8-4.png">
+                </div>
+                <div class="gallery-controls">
+                    <button class="gallery-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="gallery-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="product-detail-info">
+            <h1 class="product-detail-title" data-i18n="productDetail.product9Title">IRON Advanced Laser Welding System</h1>
+            <div class="product-pricing-detail">
+                <div class="price-info">
+                    <span class="price-label" data-i18n="productDetail.product9Spec1">Système de soudage laser haute précision</span>
+                </div>
+                <div class="order-info">
+                    <span class="order-label" data-i18n="productDetail.product9Spec2">Technologie laser avancée avec contrôle intelligent</span>
+                </div>
+            </div>
+
+            <div class="product-specifications">
+                <h3 data-i18n="productDetail.technicalSpecs">Spécifications techniques</h3>
+                <div class="spec-grid">
+                    <div class="spec-item">
+                        <span class="spec-label"><span data-i18n="products.type">Type</span>:</span>
+                        <span class="spec-value">Advanced System</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label"><span data-i18n="products.laserSource">Laser source</span>:</span>
+                        <span class="spec-value">Fiber Laser</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label"><span data-i18n="products.powerWatt">Puissance</span>:</span>
+                        <span class="spec-value">2000 W</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label"><span data-i18n="products.workingArea">Working area</span>:</span>
+                        <span class="spec-value">200 mm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label"><span data-i18n="products.laserHead">Laser head</span>:</span>
+                        <span class="spec-value">Intelligent Control</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label"><span data-i18n="products.protection">Protection</span>:</span>
+                        <span class="spec-value">Advanced Safety</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-actions">
+                <a class="contact-supplier-btn" data-i18n="productDetail.contactUs" href="./contact.html">Contacte
+                    nous</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Characteristics -->
+    <div class="product-detail-content">
+        <div class="product-characteristics">
+            <h2 class="characteristics-title" data-i18n="productDetail.characteristics">Caractéristiques :</h2>
+            <ol class="characteristics-list">
+                <li><strong>1.</strong> <span data-i18n="productDetail.product9_characteristic1">Type → Système avancé de soudage laser haute performance.</span>
+                </li>
+                <li><strong>2.</strong> <span data-i18n="productDetail.product9_characteristic2">Laser source → Fiber laser de dernière génération.</span>
+                </li>
+                <li><strong>3.</strong> <span data-i18n="productDetail.product9_characteristic3">Puissance → 2000 W pour applications industrielles exigeantes.</span>
+                </li>
+                <li><strong>4.</strong> <span data-i18n="productDetail.product9_characteristic4">Contrôle intelligent → Système de contrôle automatisé et précis.</span>
+                </li>
+                <li><strong>5.</strong> <span data-i18n="productDetail.product9_characteristic5">Working area → 200 mm de zone de travail optimale.</span>
+                </li>
+                <li><strong>6.</strong> <span data-i18n="productDetail.product9_characteristic6">Protection → Système de sécurité avancé multi-niveaux.</span>
+                </li>
+                <li><strong>7.</strong> <span data-i18n="productDetail.product9_characteristic7">Applications → Soudage de précision, assemblage, micro-soudage industriel</span>
+                </li>
+            </ol>
+        </div>
+        <img alt="IRON Advanced Laser Welding System" class="main-product-image-xl"
+             src="images/pp7-7.png">
+    </div>
+
+    <!-- Product Description -->
+    <div class="product-description">
+        <div class="description-header">
+            <div class="description-icon">
+                <i class="fas fa-info-circle"></i>
+            </div>
+            <h2 class="description-title" data-i18n="productDetail.productDescription">Description de Produit</h2>
+        </div>
+        <h3 class="info-subtitle" data-i18n="productDetail.basicInfo">Info de Base</h3>
+
+        <div class="info-table-container">
+            <div class="info-table">
+                <div class="info-row">
+                    <div class="info-label" data-i18n="productDetail.modelNumber">N° de Modèle</div>
+                    <div class="info-value">Advanced Laser System 2000</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label" data-i18n="products.laserSource">Laser source</div>
+                    <div class="info-value">Fiber Laser</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label" data-i18n="productDetail.type">Type</div>
+                    <div class="info-value">Advanced System</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label" data-i18n="products.laserHead">Laser head</div>
+                    <div class="info-value">Intelligent Control</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label" data-i18n="products.fiberCable">Fibre cable</div>
+                    <div class="info-value">10 m</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label" data-i18n="products.workingArea">Working area</div>
+                    <div class="info-value">200 mm</div>
+                </div>
+            </div>
+            <div class="info-table">
+                <div class="info-row">
+                    <div class="info-label" data-i18n="products.protection">Protection</div>
+                    <div class="info-value" data-i18n="productDetail.advancedSafety">Sécurité avancée</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label" data-i18n="products.power">Alimentation</div>
+                    <div class="info-value" data-i18n="productDetail.electric">Electrique</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label" data-i18n="productDetail.powerOutput">Puissance</div>
+                    <div class="info-value">2000 W</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label" data-i18n="productDetail.advantages">Avantages</div>
+                    <div class="info-value" data-i18n="productDetail.highPrecision">Haute précision</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label" data-i18n="productDetail.applications">Applications</div>
+                    <div class="info-value" data-i18n="productDetail.precisionWelding">Soudage de précision</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label" data-i18n="productDetail.automation">Automatisation</div>
+                    <div class="info-value" data-i18n="productDetail.intelligentControl">Contrôle intelligent</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Similar Products -->
+    <div class="similar-products">
+        <div class="similar-products-header">
+            <div class="similar-products-icon">
+                <i class="fas fa-layer-group"></i>
+            </div>
+            <h2 class="similar-products-title" data-i18n="productDetail.findSimilarProducts">Trouver des produits
+                similaires</h2>
+        </div>
+
+        <div class="similar-products-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img alt="Soudeur MIG MMA TIG" src="images/pp1.png">
+                </div>
+                <div class="product-content">
+                    <h4 class="products-section-title" data-i18n="productDetail.welderMigMmaTig">Soudeur MIG MMA
+                        TIG</h4>
+                    <p class="products-section-description" data-i18n="productDetail.welderMigMmaTigDesc">Soudeur
+                        multifonction à gaz protégé MIG MMA TIG IGBT avec
+                        inverseur numérique Power Ms-200c</p>
+                    <a class="product-btn" data-i18n="productDetail.seeMore" href="./product-detail-1.html">VOIR
+                        PLUS</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img alt="IRON Cutting Disc T42" src="images/pp2-1.png">
+                </div>
+                <div class="product-content">
+                    <h4 class="products-section-title" data-i18n="productDetail.cuttingDiscT42">Disque de Coupe T42</h4>
+                    <p class="products-section-description" data-i18n="productDetail.cuttingDiscT42Desc">IRON cutting
+                        disc for Metal&S.S T42 type - Disque à
+                        tronçonner 230 x 1,9 x 22,23 mm</p>
+                    <a class="product-btn" data-i18n="productDetail.seeMore" href="./product-detail-2.html">VOIR
+                        PLUS</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img alt="IRON Laser Cleaning" src="images/pp7-7.png">
+                </div>
+                <div class="product-content">
+                    <h4 class="products-section-title" data-i18n="productDetail.laserCleaning">Machine de Nettoyage Laser</h4>
+                    <p class="products-section-description" data-i18n="productDetail.laserCleaningDesc">IRON Laser cleaning machine Mini trolley - Nettoyage laser précis avec tête Zabtk</p>
+                    <a class="product-btn" data-i18n="productDetail.seeMore" href="./product-detail-8.html">VOIR
+                        PLUS</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img alt="IRON Flap Disc 125mm" src="images/pp5-5.png">
+                </div>
+                <div class="product-content">
+                    <h4 class="products-section-title" data-i18n="productDetail.flapDisc125">Disque à Lamelles
+                        125mm</h4>
+                    <p class="products-section-description" data-i18n="productDetail.flapDisc125Desc">IRON 4.5 inch
+                        flexible flap disc 125 x 22.23 mm - Disque à
+                        lamelles en zirconium</p>
+                    <a class="product-btn" data-i18n="productDetail.seeMore" href="./product-detail-5.html">VOIR
+                        PLUS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-partners">
+        <div class="container">
+            <div class="partners-grid">
+                <div class="partner-logo partner-logo-special">
+                    <img alt="Lincoln Electric"
+                         src="./images/c5606bd7aaeaaedeb56aa0a0cbb7155233416eb7.png">
+                </div>
+                <div class="partner-logo partner-logo-special">
+                    <img alt="Lincoln Electric"
+                         src="./images/ufuk-bg.png">
+                </div>
+                <div class="partner-logo partner-logo-special">
+                    <img src="./images/485b8825f52122c92686c14f4aca12ab433536b0.png" style="max-width: 150px;">
+                </div>
+                <div class="partner-logo partner-logo-special">
+                    <img alt="Lincoln Electric"
+                         src="./images/ufuk.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-main egle-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <img alt="Logo" src="images/hedear-logo.png" style="width: 150px">
+                    </div>
+                    <p class="footer-description" data-i18n="footer.description">
+                        Explorez notre gamme de produits ou contactez-nous pour obtenir des conseils personnalisés.
+                    </p>
+                    <div class="footer-social">
+                        <a class="social-link"
+                           href="https://www.facebook.com/people/Iron-Equipement-Industriel/pfbid0wyjUP6wVyzixEU6XdVCnra2QegrPXoUKGs1g7tD2MxWXNbX1v1Tqz2bqTY1STPuUl/"
+                           target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="social-link" href="https://www.instagram.com/ironequipementindustriel"
+                           target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a class="social-link" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-link" href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-title" data-i18n="footer.linksTitle">Links</h4>
+                    <ul class="footer-links">
+                        <li><a data-i18n="footer.aboutUs" href="./about.html">À propos de nous</a></li>
+                        <li><a data-i18n="footer.discoverTeam" href="./index.html#team">Découvrez notre équipe</a></li>
+                        <li><a data-i18n="footer.ourProject" href="./index.html#products">Notre projet</a></li>
+                        <li><a data-i18n="nav.contact" href="./contact.html">Contact</a></li>
+                        <li><a data-i18n="footer.faqs" href="./faq.html">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-title" data-i18n="footer.contactTitle">Contact</h4>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-i18n="header.address">Adresse : Hammem Sousse</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span data-i18n="header.phone">Tel : +216 53 348 000</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span data-i18n="header.email">Email : Contact@iron.tn</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="js/i18n.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
