@@ -21,23 +21,53 @@
             <div class="header-contact">
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt"></i>
-                    <span>Adresse : Hammem Sousse</span>
+                    <span data-i18n="header.address">Adresse : Hammem Sousse</span>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
-                    <span>Tel : +216 53 348 000</span>
+                    <span data-i18n="header.phone">Tel : +216 53 348 000</span>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
-                    <span>Email : Contact@iron.tn</span>
+                    <span data-i18n="header.email">Email : Contact@iron.tn</span>
                 </div>
             </div>
             <div class="header-social">
-                <a class="social-link" href="#"><i class="fab fa-facebook-f"></i></a>
-                <a class="social-link" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="social-link"
+                   href="https://www.facebook.com/people/Iron-Equipement-Industriel/pfbid0wyjUP6wVyzixEU6XdVCnra2QegrPXoUKGs1g7tD2MxWXNbX1v1Tqz2bqTY1STPuUl/"
+                   target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a class="social-link" href="https://www.instagram.com/ironequipementindustriel" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
                 <a class="social-link" href="#"><i class="fab fa-linkedin-in"></i></a>
                 <a class="social-link" href="#"><i class="fab fa-twitter"></i></a>
             </div>
+            <div class="language-selector">
+                <button class="btn-language" id="languageDropdown" type="button">
+                    <span class="flag-icon current-flag">🇫🇷</span>
+                    <span class="lang-text current-lang">FR</span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item lang-option active" data-lang="fr" href="#">
+                            <span class="flag-icon">🇫🇷</span>
+                            <span class="lang-name">Français</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item lang-option" data-lang="en" href="#">
+                            <span class="flag-icon">🇬🇧</span>
+                            <span class="lang-name">English</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item lang-option" data-lang="ar" href="#">
+                            <span class="flag-icon">🇦🇪</span>
+                            <span class="lang-name">العربية</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
         </div>
     </div>
 
@@ -50,18 +80,45 @@
             </div>
 
             <ul class="nav-menu">
-                <li><a class="nav-link active" href="./index.html">Home</a></li>
-                <li><a class="nav-link" href="./about.html">About</a></li>
-                <li><a class="nav-link" href="./products.html">Product</a></li>
-                <li><a class="nav-link" href="./partnaire.html">Parteniers</a></li>
-                <li><a class="nav-link" href="./blog.html">Blog</a></li>
-                <li><a class="nav-link" href="./contact.html">Contact</a></li>
+                <li><a class="nav-link active" data-i18n="nav.home" href="./index.html">Home</a></li>
+                <li><a class="nav-link" data-i18n="nav.about" href="./about.html">About</a></li>
+                <li><a class="nav-link" data-i18n="nav.product" href="./products.html">Product</a></li>
+                <li><a class="nav-link" data-i18n="nav.partners" href="./partnaire.html">Parteniers</a></li>
+                <li><a class="nav-link" data-i18n="nav.blog" href="./blog.html">Blog</a></li>
+                <li><a class="nav-link" data-i18n="nav.contact" href="./contact.html">Contact</a></li>
             </ul>
+
+            <!-- Mobile Language Selector -->
+            <div class="language-selector-mobile">
+                <button class="btn-language" id="languageDropdownMobile" type="button">
+                    <span class="flag-icon current-flag">🇫🇷</span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item lang-option active" data-lang="fr" href="#">
+                            <span class="flag-icon">🇫🇷</span>
+                            <span class="lang-name">Français</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item lang-option" data-lang="en" href="#">
+                            <span class="flag-icon">🇬🇧</span>
+                            <span class="lang-name">English</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item lang-option" data-lang="ar" href="#">
+                            <span class="flag-icon">🇦🇪</span>
+                            <span class="lang-name">العربية</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
             <div class="nav-actions">
                 <a class="whatsapp-btn" href="https://wa.me/21653348000" target="_blank">
                     <i class="fab fa-whatsapp"></i>
-                    <span><span>Discutez sur</span> WhatsApp</span>
+                    <span><span data-i18n="header.whatsapp">Discutez sur</span> <span data-i18n="header.whatsappBtn">WhatsApp</span></span>
                 </a>
                 <div class="mobile-toggle">
                     <span></span>
@@ -82,17 +139,17 @@
     <div class="container">
         <div class="hero-content">
             <div class="hero-text">
-                <h1 class="hero-title">
+                <h1 class="hero-title" data-i18n="hero.title" data-i18n-html>
                     BIENVENUE<br>
                     CHEZ IRON !
                 </h1>
-                <p class="hero-description">
+                <p class="hero-description" data-i18n="hero.description">
                     Découvrez des postes à souder de qualité supérieure, conçus pour
                     offrir une fiabilité et une efficacité inégalées. Que vous soyez un
                     professionnel ou un amateur, nous avons la solution idéale pour vos
                     besoins de soudage.
                 </p>
-                <a class="hero-btn" href="./products.html">Voir plus</a>
+                <a class="hero-btn" data-i18n="hero.btnMore" href="./products.html">Voir plus</a>
             </div>
             <div class="hero-image">
                 <div class="product-showcase">
@@ -121,8 +178,9 @@
             <div class="section-icon">
                 <i class="fas fa-shield-alt"></i>
             </div>
-            <h2 class="section-title">Pourquoi nous choisir ?</h2>
-            <h3 class="section-subtitle">Pourquoi choisir notre entreprise de soudage ?</h3>
+            <h2 class="section-title" data-i18n="features.title">Pourquoi nous choisir ?</h2>
+            <h3 class="section-subtitle" data-i18n="features.subtitle">Pourquoi choisir notre entreprise de soudage
+                ?</h3>
         </div>
 
         <div class="features-content">
@@ -145,31 +203,35 @@
                     <span class="emoji">😊</span>
                     <span class="emoji">🔥</span>
                 </div>-->
-                <a class="view-more-btn" href="./products.html">Voir plus</a>
+                <a class="view-more-btn" data-i18n="features.btnMore" href="./products.html">Voir plus</a>
             </div>
 
             <div class="features-text">
                 <div class="feature-item">
-                    <h4>_ Qualité professionnelle accessible</h4>
-                    <p>Chez IRON, nous sélectionnons rigoureusement des machines à souder fiables et performantes,
+                    <h4 data-i18n="features.feature1Title">_ Qualité professionnelle accessible</h4>
+                    <p data-i18n="features.feature1Desc">Chez IRON, nous sélectionnons rigoureusement des machines à
+                        souder fiables et performantes,
                         adaptées aussi bien aux professionnels qu'aux passionnés de bricolage.</p>
                 </div>
 
                 <div class="feature-item">
-                    <h4>_ Livraison rapide et sécurisée</h4>
-                    <p>Nous assurons une expédition rapide de vos commandes, avec un suivi transparent jusqu'à la
+                    <h4 data-i18n="features.feature2Title">_ Livraison rapide et sécurisée</h4>
+                    <p data-i18n="features.feature2Desc">Nous assurons une expédition rapide de vos commandes, avec un
+                        suivi transparent jusqu'à la
                         réception.</p>
                 </div>
 
                 <div class="feature-item">
-                    <h4>_ Transparence et confiance</h4>
-                    <p>Pas de frais cachés, des descriptions claires et des conseils honnêtes pour vous aider à faire le
+                    <h4 data-i18n="features.feature3Title">_ Transparence et confiance</h4>
+                    <p data-i18n="features.feature3Desc">Pas de frais cachés, des descriptions claires et des conseils
+                        honnêtes pour vous aider à faire le
                         meilleur choix.</p>
                 </div>
 
                 <div class="feature-item">
-                    <h4>_ En constante évolution</h4>
-                    <p>Nous sommes à l'écoute de vos retours pour améliorer continuellement notre offre et nos
+                    <h4 data-i18n="features.feature4Title">_ En constante évolution</h4>
+                    <p data-i18n="features.feature4Desc">Nous sommes à l'écoute de vos retours pour améliorer
+                        continuellement notre offre et nos
                         services.</p>
                 </div>
             </div>
@@ -184,8 +246,8 @@
             <div class="section-icon">
                 <i class="fas fa-box"></i>
             </div>
-            <h2 class="section-subtitle">Notre produits</h2>
-            <h3 class="section-title">Découvrez notre produits</h3>
+            <h2 class="section-subtitle" data-i18n="products.subtitle">Notre produits</h2>
+            <h3 class="section-title" data-i18n="products.title">Découvrez notre produits</h3>
         </div>
 
         <div class="products-grid">
@@ -194,10 +256,11 @@
                     <img alt="Portable Power Station" src="images/pp3.png">
                 </div>
                 <div class="product-content">
-                    <h4 class="products-section-title">Cutting disc</h4>
-                    <p class="products-section-description">Cutting Disc 230×3.2×22.23mm
+                    <h4 class="products-section-title" data-i18n="products.indexProduct1Title">Cutting disc</h4>
+                    <p class="products-section-description" data-i18n="products.indexProduct1Desc">Cutting Disc
+                        230×3.2×22.23mm
                         Suitable for cutting steel, iron, and other metals.</p>
-                    <a class="product-btn" href="./product-detail-3.html">VOIR PLUS</a>
+                    <a class="product-btn" data-i18n="products.btnMore" href="./product-detail-3.html">VOIR PLUS</a>
                 </div>
             </div>
 
@@ -206,10 +269,11 @@
                     <img alt="Welding Wire Spool" src="images/pp2-1.png">
                 </div>
                 <div class="product-content">
-                    <h4 class="products-section-title">Cutting disc</h4>
-                    <p class="products-section-description">Cutting Disc 230×1.9×22.23mm
-                      Suitable for cutting steel, iron, and other metals.</p>
-                    <a class="product-btn" href="./product-detail-2.html">VOIR PLUS</a>
+                    <h4 class="products-section-title" data-i18n="products.indexProduct2Title">Cutting disc</h4>
+                    <p class="products-section-description" data-i18n="products.indexProduct2Desc">Cutting Disc
+                        230×1.9×22.23mm
+                        Suitable for cutting steel, iron, and other metals.</p>
+                    <a class="product-btn" data-i18n="products.btnMore" href="./product-detail-2.html">VOIR PLUS</a>
                 </div>
             </div>
 
@@ -218,10 +282,11 @@
                     <img alt="MIG/MMA Machine" src="images/pp1.png">
                 </div>
                 <div class="product-content">
-                    <h4 class="products-section-title">MIG/MMA Machine</h4>
-                    <p class="products-section-description">Fil de 0.8 à 1,0 mm / électrodes de 2, à 4,0 mm moteur à
+                    <h4 class="products-section-title" data-i18n="products.indexProduct3Title">MIG/MMA Machine</h4>
+                    <p class="products-section-description" data-i18n="products.indexProduct3Desc">Fil de 0.8 à 1,0 mm /
+                        électrodes de 2, à 4,0 mm moteur à
                         courant continu</p>
-                    <a class="product-btn" href="./product-detail-1.html">VOIR PLUS</a>
+                    <a class="product-btn" data-i18n="products.btnMore" href="./product-detail-1.html">VOIR PLUS</a>
                 </div>
             </div>
         </div>
@@ -235,8 +300,8 @@
             <div class="section-icon">
                 <i class="fas fa-users"></i>
             </div>
-            <h2 class="section-subtitle">Notre équipe</h2>
-            <h3 class="section-title">Découvrez notre équipe</h3>
+            <h2 class="section-subtitle" data-i18n="team.subtitle">Notre équipe</h2>
+            <h3 class="section-title" data-i18n="team.title">Découvrez notre équipe</h3>
         </div>
 
         <div class="team-grid">
@@ -286,7 +351,7 @@
             <div class="section-icon">
                 <i class="fas fa-mobile-alt"></i>
             </div>
-            <h2 class="section-title">Témoignages via les réseaux sociaux</h2>
+            <h2 class="section-title" data-i18n="testimonials.title">Témoignages via les réseaux sociaux</h2>
         </div>
 
         <div class="testimonials-grid">
@@ -298,7 +363,7 @@
                     </div>
                     <div class="testimonial-info">
                         <h4>Saida</h4>
-                        <span>Recommande</span>
+                        <span data-i18n="testimonials.recommends">Recommande</span>
                     </div>
                 </div>
                 <div class="testimonial-rating">
@@ -308,7 +373,8 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                 </div>
-                <p class="testimonial-text">"Excellent service ! La machine à souder que j'ai achetée est puissante,
+                <p class="testimonial-text" data-i18n="testimonials.testimonial">"Excellent service ! La machine à
+                    souder que j'ai achetée est puissante,
                     facile à utiliser et parfaitement adaptée à mes projets. Livraison rapide et équipe très
                     professionnelle."</p>
             </div>
@@ -321,7 +387,7 @@
                     </div>
                     <div class="testimonial-info">
                         <h4>Raouia</h4>
-                        <span>Recommande</span>
+                        <span data-i18n="testimonials.recommends">Recommande</span>
                     </div>
                 </div>
                 <div class="testimonial-rating">
@@ -331,7 +397,8 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                 </div>
-                <p class="testimonial-text">"Excellent service ! La machine à souder que j'ai achetée est puissante,
+                <p class="testimonial-text" data-i18n="testimonials.testimonial">"Excellent service ! La machine à
+                    souder que j'ai achetée est puissante,
                     facile à utiliser et parfaitement adaptée à mes projets. Livraison rapide et équipe très
                     professionnelle."</p>
             </div>
@@ -344,7 +411,7 @@
                     </div>
                     <div class="testimonial-info">
                         <h4>Mondher</h4>
-                        <span>Recommande</span>
+                        <span data-i18n="testimonials.recommends">Recommande</span>
                     </div>
                 </div>
                 <div class="testimonial-rating">
@@ -354,7 +421,8 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                 </div>
-                <p class="testimonial-text">"Excellent service ! La machine à souder que j'ai achetée est puissante,
+                <p class="testimonial-text" data-i18n="testimonials.testimonial">"Excellent service ! La machine à
+                    souder que j'ai achetée est puissante,
                     facile à utiliser et parfaitement adaptée à mes projets. Livraison rapide et équipe très
                     professionnelle."</p>
             </div>
@@ -367,23 +435,27 @@
     <div class="contact-bg"></div>
     <div class="container">
         <div class="contact-content">
-            <h2 class="contact-title">Contacte Nous</h2>
+            <h2 class="contact-title" data-i18n="contact.title">Contacte Nous</h2>
             <form class="contact-form" id="indexContactForm">
                 <div class="form-row">
                     <div class="form-group">
-                        <input id="index_prenom" name="prenom" placeholder="Prénom & Nom" required type="text">
+                        <input data-i18n-placeholder="contact.firstName" id="index_prenom" name="prenom"
+                               placeholder="Prénom & Nom" required type="text">
                     </div>
                     <div class="form-group">
-                        <input id="index_email" name="email" placeholder="Email" required type="email">
+                        <input data-i18n-placeholder="contact.email" id="index_email" name="email" placeholder="Email"
+                               required type="email">
                     </div>
                     <div class="form-group">
-                        <input id="index_address" name="address" placeholder="Addresse" type="text">
+                        <input data-i18n-placeholder="contact.address" id="index_address" name="address"
+                               placeholder="Addresse" type="text">
                     </div>
                 </div>
                 <div class="form-group">
-                    <textarea id="index_message" name="message" placeholder="Message" required rows="8"></textarea>
+                    <textarea data-i18n-placeholder="contact.message" id="index_message" name="message"
+                              placeholder="Message" required rows="8"></textarea>
                 </div>
-                <button class="submit-btn" type="submit">Envoyer le message</button>
+                <button class="submit-btn" data-i18n="contact.btnSubmit" type="submit">Envoyer le message</button>
                 <div class="response-message" id="indexContactResponse" style="display: none;"></div>
             </form>
         </div>
@@ -421,42 +493,45 @@
                     <div class="logo">
                         <img alt="Logo" src="images/hedear-logo.png" style="width: 150px">
                     </div>
-                    <p class="footer-description">
+                    <p class="footer-description" data-i18n="footer.description">
                         Explorez notre gamme de produits ou contactez-nous pour obtenir des conseils personnalisés.
                     </p>
                     <div class="footer-social">
-                        <a class="social-link" href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a class="social-link" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="social-link"
+                           href="https://www.facebook.com/people/Iron-Equipement-Industriel/pfbid0wyjUP6wVyzixEU6XdVCnra2QegrPXoUKGs1g7tD2MxWXNbX1v1Tqz2bqTY1STPuUl/"
+                           target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="social-link" href="https://www.instagram.com/ironequipementindustriel"
+                           target="_blank"><i class="fab fa-instagram"></i></a>
                         <a class="social-link" href="#"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-link" href="#"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
 
                 <div class="footer-section">
-                    <h4 class="footer-title">Links</h4>
+                    <h4 class="footer-title" data-i18n="footer.linksTitle">Links</h4>
                     <ul class="footer-links">
-                        <li><a href="./about.html">À propos de nous</a></li>
-                        <li><a href="./index.html#team">Découvrez notre équipe</a></li>
-                        <li><a href="./index.html#products">Notre projet</a></li>
-                        <li><a href="./contact.html">Contact</a></li>
-                        <li><a href="./faq.html">FAQs</a></li>
+                        <li><a data-i18n="footer.aboutUs" href="./about.html">À propos de nous</a></li>
+                        <li><a data-i18n="footer.discoverTeam" href="./index.html#team">Découvrez notre équipe</a></li>
+                        <li><a data-i18n="footer.ourProject" href="./index.html#products">Notre projet</a></li>
+                        <li><a data-i18n="nav.contact" href="./contact.html">Contact</a></li>
+                        <li><a data-i18n="footer.faqs" href="./faq.html">FAQs</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h4 class="footer-title">Contact</h4>
+                    <h4 class="footer-title" data-i18n="footer.contactTitle">Contact</h4>
                     <div class="footer-contact">
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Adresse : Hammem Sousse</span>
+                            <span data-i18n="header.address">Adresse : Hammem Sousse</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
-                            <span>Tel : +216 53 348 000</span>
+                            <span data-i18n="header.phone">Tel : +216 53 348 000</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <span>Email : Contact@iron.tn</span>
+                            <span data-i18n="header.email">Email : Contact@iron.tn</span>
                         </div>
                     </div>
                 </div>
@@ -465,6 +540,7 @@
     </div>
 </footer>
 
+<script src="js/i18n.js"></script>
 <script src="js/script.js" type="module"></script>
 <script src="js/send_email.js"></script>
 </body>

@@ -1,5 +1,8 @@
 // Wait for DOM to be loaded
 document.addEventListener('DOMContentLoaded', function () {
+    // Initialize native language dropdown
+    initializeLanguageDropdown();
+
     // Mobile menu toggle
     const mobileToggle = document.querySelector('.mobile-toggle');
     const navMenu = document.querySelector('.nav-menu');
@@ -714,10 +717,69 @@ Contact: +216 53 348 000
 Email: Contact@iron.tn
 `);
 
+// Native Language Dropdown Implementation
+function initializeLanguageDropdown() {
+    // Get all language dropdowns (desktop and mobile)
+    const languageSelectors = document.querySelectorAll('.language-selector, .language-selector-mobile');
+    
+    languageSelectors.forEach(selector => {
+        const button = selector.querySelector('.btn-language');
+        const menu = selector.querySelector('.dropdown-menu');
+        
+        if (!button || !menu) return;
+        
+        // Toggle dropdown on button click
+        button.addEventListener('click', function(e) {
+            e.stopPropagation();
+            
+            // Close all other dropdowns first
+            document.querySelectorAll('.dropdown-menu').forEach(otherMenu => {
+                if (otherMenu !== menu) {
+                    otherMenu.classList.remove('show');
+                }
+            });
+            document.querySelectorAll('.btn-language').forEach(otherBtn => {
+                if (otherBtn !== button) {
+                    otherBtn.classList.remove('active');
+                }
+            });
+            
+            // Toggle current dropdown
+            menu.classList.toggle('show');
+            button.classList.toggle('active');
+        });
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.language-selector') && !e.target.closest('.language-selector-mobile')) {
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                menu.classList.remove('show');
+            });
+            document.querySelectorAll('.btn-language').forEach(btn => {
+                btn.classList.remove('active');
+            });
+        }
+    });
+    
+    // Close dropdown when pressing Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                menu.classList.remove('show');
+            });
+            document.querySelectorAll('.btn-language').forEach(btn => {
+                btn.classList.remove('active');
+            });
+        }
+    });
+}
+
 // Export functions for external use (if needed)
 window.IronWebsite = {
     showNotification,
     validateContactForm,
     initializeNavigation,
-    initializeAnimations
+    initializeAnimations,
+    initializeLanguageDropdown
 };

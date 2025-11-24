@@ -12,6 +12,7 @@
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
 </head>
 <body>
 <!-- Header -->
@@ -21,23 +22,53 @@
             <div class="header-contact">
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt"></i>
-                    <span>Adresse : Hammem Sousse</span>
+                    <span data-i18n="header.address">Adresse : Hammem Sousse</span>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
-                    <span>Tel : +216 53 348 000</span>
+                    <span data-i18n="header.phone">Tel : +216 53 348 000</span>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
-                    <span>Email : Contact@iron.tn</span>
+                    <span data-i18n="header.email">Email : Contact@iron.tn</span>
                 </div>
             </div>
             <div class="header-social">
-                <a class="social-link" href="#"><i class="fab fa-facebook-f"></i></a>
-                <a class="social-link" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="social-link"
+                   href="https://www.facebook.com/people/Iron-Equipement-Industriel/pfbid0wyjUP6wVyzixEU6XdVCnra2QegrPXoUKGs1g7tD2MxWXNbX1v1Tqz2bqTY1STPuUl/"
+                   target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a class="social-link" href="https://www.instagram.com/ironequipementindustriel" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
                 <a class="social-link" href="#"><i class="fab fa-linkedin-in"></i></a>
                 <a class="social-link" href="#"><i class="fab fa-twitter"></i></a>
             </div>
+            <div class="language-selector">
+                <button class="btn-language" id="languageDropdown" type="button">
+                    <span class="flag-icon current-flag">🇫🇷</span>
+                    <span class="lang-text current-lang">FR</span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item lang-option active" data-lang="fr" href="#">
+                            <span class="flag-icon">🇫🇷</span>
+                            <span class="lang-name">Français</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item lang-option" data-lang="en" href="#">
+                            <span class="flag-icon">🇬🇧</span>
+                            <span class="lang-name">English</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item lang-option" data-lang="ar" href="#">
+                            <span class="flag-icon">🇦🇪</span>
+                            <span class="lang-name">العربية</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
         </div>
     </div>
 
@@ -50,18 +81,44 @@
             </div>
 
             <ul class="nav-menu">
-                <li><a class="nav-link" href="./index.html">Home</a></li>
-                <li><a class="nav-link" href="./about.html">About</a></li>
-                <li><a class="nav-link active" href="./products.html">Product</a></li>
-                <li><a class="nav-link" href="./partnaire.html">Parteniers</a></li>
-                <li><a class="nav-link" href="./blog.html">Blog</a></li>
-                <li><a class="nav-link" href="./contact.html">Contact</a></li>
-            </ul>
+                <li><a class="nav-link" data-i18n="nav.home" href="./index.html">Home</a></li>
+                <li><a class="nav-link" data-i18n="nav.about" href="./about.html">About</a></li>
+                <li><a class="nav-link active" data-i18n="nav.product" href="./products.html">Product</a></li>
+                <li><a class="nav-link" data-i18n="nav.partners" href="./partnaire.html">Parteniers</a></li>
+                <li><a class="nav-link" data-i18n="nav.blog" href="./blog.html">Blog</a></li>
+                <li><a class="nav-link" data-i18n="nav.contact" href="./contact.html">Contact</a></li>
+            </ul>            <!-- Mobile Language Selector -->
+            <div class="language-selector-mobile">
+                <button class="btn-language" id="languageDropdownMobile" type="button">
+                    <span class="flag-icon current-flag">🇫🇷</span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item lang-option active" data-lang="fr" href="#">
+                            <span class="flag-icon">🇫🇷</span>
+                            <span class="lang-name">Français</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item lang-option" data-lang="en" href="#">
+                            <span class="flag-icon">🇬🇧</span>
+                            <span class="lang-name">English</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item lang-option" data-lang="ar" href="#">
+                            <span class="flag-icon">🇦🇪</span>
+                            <span class="lang-name">العربية</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
 
             <div class="nav-actions">
                 <a class="whatsapp-btn" href="https://wa.me/21653348000" target="_blank">
                     <i class="fab fa-whatsapp"></i>
-                    <span><span>Discutez sur</span> WhatsApp</span>
+                    <span><span data-i18n="header.whatsapp">Discutez sur</span> <span data-i18n="header.whatsappBtn">WhatsApp</span></span>
                 </a>
                 <div class="mobile-toggle">
                     <span></span>
@@ -77,11 +134,11 @@
 <section class="page-header">
     <div class="container">
         <div class="page-header-content">
-            <h1 class="page-title">Products</h1>
+            <h1 class="page-title" data-i18n="nav.product">Products</h1>
             <div class="breadcrumb">
-                <a href="./index.html">Home</a>
+                <a data-i18n="breadcrumb.home" href="./index.html">Home</a>
                 <i class="fas fa-chevron-right"></i>
-                <span>Products</span>
+                <span data-i18n="nav.product">Products</span>
             </div>
         </div>
         <div class="page-header-decoration">
@@ -115,46 +172,49 @@
             </div>
         </div>
         <div class="product-detail-info">
-            <h1 class="product-detail-title">IRON welding wire ER70S-6</h1>
+            <h1 class="product-detail-title" data-i18n="productDetail.weldingWireSilver">IRON welding wire ER70S-6</h1>
             <div class="product-pricing-detail">
                 <div class="price-info">
-                    <span class="price-label">Fil à souder MIG argenté (métallique)</span>
+                    <span class="price-label" data-i18n="productDetail.product7Spec1">Fil à souder MIG argenté (métallique)</span>
                     <!--<span class="price-value">35.00-40.00 DT</span>-->
                 </div>
                 <div class="order-info">
-                    <span class="order-label">Soudage acier, acier inoxydable et alliages légers</span>
+                    <span class="order-label" data-i18n="productDetail.product7Spec2">Soudage acier, acier inoxydable et alliages légers</span>
                     <!--<span class="order-value">5 Pièces</span>-->
                 </div>
             </div>
 
             <div class="product-specifications">
-                <h3>Spécifications techniques</h3>
+                <h3 data-i18n="productDetail.technicalSpecs">Spécifications techniques</h3>
                 <div class="spec-grid">
                     <div class="spec-item">
-                        <span class="spec-label">Diamètre:</span>
+                        <span class="spec-label"><span data-i18n="products.diameter">Diamètre</span>:</span>
                         <span class="spec-value">0,8–1,2 mm</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">Vitesse de soudage :</span>
+                        <span class="spec-label"><span
+                                data-i18n="products.weldingSpeed">Vitesse de soudage</span>:</span>
                         <span class="spec-value">10 m/min</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">Matériau:</span>
+                        <span class="spec-label"><span data-i18n="products.material">Matériau</span>:</span>
                         <span class="spec-value">Acier ou acier inoxydable</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">Alimentation:</span>
+                        <span class="spec-label"><span data-i18n="products.power">Alimentation</span>:</span>
                         <span class="spec-value">Gaz inerte (Argon/CO₂)</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">Tolérance épaisseur:</span>
+                        <span class="spec-label"><span
+                                data-i18n="products.thicknessTolerance">Tolérance épaisseur</span>:</span>
                         <span class="spec-value"> 0,5–5 mm</span>
                     </div>
                 </div>
             </div>
 
             <div class="product-actions">
-                <a class="contact-supplier-btn" href="./contact.html">Contacte nous</a>
+                <a class="contact-supplier-btn" data-i18n="productDetail.contactUs" href="./contact.html">Contacte
+                    nous</a>
             </div>
         </div>
     </div>
@@ -162,21 +222,21 @@
     <!-- Product Characteristics -->
     <div class="product-detail-content">
         <div class="product-characteristics">
-            <h2 class="characteristics-title">Caractéristiques :</h2>
+            <h2 class="characteristics-title" data-i18n="productDetail.characteristics">Caractéristiques :</h2>
             <ol class="characteristics-list">
-                <li><strong>1.</strong> Diamètre → 0,8 / 1 / 1,2 mm.
+                <li><strong>1.</strong> <span data-i18n="productDetail.wire7_characteristic1">Diamètre → 0,8 / 1 / 1,2 mm.</span>
                 </li>
-                <li><strong>2.</strong> Matériau → Acier / Inox / Métal spécial
+                <li><strong>2.</strong> <span data-i18n="productDetail.wire7_characteristic2">Matériau → Acier / Inox / Métal spécial</span>
                 </li>
-                <li><strong>3.</strong> Type → MIG / MAG.
+                <li><strong>3.</strong> <span data-i18n="productDetail.wire7_characteristic3">Type → MIG / MAG.</span>
                 </li>
-                <li><strong>4.</strong> Vitesse max → Selon machine et fil
+                <li><strong>4.</strong> <span data-i18n="productDetail.wire7_characteristic4">Vitesse max → Selon machine et fil</span>
                 </li>
-                <li><strong>5.</strong> Utilisation → Soudure industrielle ou atelie
+                <li><strong>5.</strong> <span data-i18n="productDetail.wire7_characteristic5">Utilisation → Soudure industrielle ou atelie</span>
                 </li>
-                <li><strong>6.</strong> Compatibilité → Acier, inox, aluminium.
+                <li><strong>6.</strong> <span data-i18n="productDetail.wire7_characteristic6">Compatibilité → Acier, inox, aluminium.</span>
                 </li>
-                <li><strong>7.</strong> Durabilité → Résistant à la corrosion et à la chaleur
+                <li><strong>7.</strong> <span data-i18n="productDetail.wire7_characteristic7">Durabilité → Résistant à la corrosion et à la chaleur</span>
                 </li>
             </ol>
         </div>
@@ -190,60 +250,62 @@
             <div class="description-icon">
                 <i class="fas fa-info-circle"></i>
             </div>
-            <h2 class="description-title">Description de Produit</h2>
+            <h2 class="description-title" data-i18n="productDetail.productDescription">Description de Produit</h2>
         </div>
-        <h3 class="info-subtitle">Info de Base</h3>
+        <h3 class="info-subtitle" data-i18n="productDetail.basicInfo">Info de Base</h3>
 
         <div class="info-table-container">
             <div class="info-table">
                 <div class="info-row">
-                    <div class="info-label">N° de Modèle</div>
+                    <div class="info-label" data-i18n="productDetail.modelNumber">N° de Modèle</div>
                     <div class="info-value">Wire ER70S-6</div>
                 </div>
                 <div class="info-row">
-                    <div class="info-label">Matériau</div>
-                    <div class="info-value">Argent / Alliage</div>
+                    <div class="info-label" data-i18n="products.material">Matériau</div>
+                    <div class="info-value" data-i18n="productDetail.silverAlloy">Argent / Alliage</div>
                 </div>
                 <div class="info-row">
-                    <div class="info-label">Type</div>
+                    <div class="info-label" data-i18n="productDetail.type">Type</div>
                     <div class="info-value">MIG / MAG / TIG</div>
                 </div>
                 <div class="info-row">
-                    <div class="info-label">Tension</div>
-                    <div class="info-value">Compatible machine</div>
+                    <div class="info-label" data-i18n="productDetail.voltage">Tension</div>
+                    <div class="info-value" data-i18n="productDetail.machineCompatible">Compatible machine</div>
                 </div>
                 <div class="info-row">
-                    <div class="info-label">Vitesse</div>
-                    <div class="info-value">Selon machine</div>
+                    <div class="info-label" data-i18n="productDetail.speed">Vitesse</div>
+                    <div class="info-value" data-i18n="productDetail.accordingToMachine">Selon machine</div>
                 </div>
                 <div class="info-row">
-                    <div class="info-label">Utilisation</div>
-                    <div class="info-value">Soudure précise</div>
+                    <div class="info-label" data-i18n="productDetail.usage">Utilisation</div>
+                    <div class="info-value" data-i18n="productDetail.preciseWelding">Soudure précise</div>
                 </div>
             </div>
             <div class="info-table">
                 <div class="info-row">
-                    <div class="info-label">Compatibilité</div>
-                    <div class="info-value">Inox / Cuivre / Aluminium</div>
+                    <div class="info-label" data-i18n="productDetail.compatibility">Compatibilité</div>
+                    <div class="info-value" data-i18n="productDetail.stainlessCopperAluminum">Inox / Cuivre /
+                        Aluminium
+                    </div>
                 </div>
                 <div class="info-row">
-                    <div class="info-label">Durabilité</div>
-                    <div class="info-value">Haute</div>
+                    <div class="info-label" data-i18n="productDetail.durability">Durabilité</div>
+                    <div class="info-value" data-i18n="productDetail.high">Haute</div>
                 </div>
                 <div class="info-row">
-                    <div class="info-label">Revêtement</div>
-                    <div class="info-value">Nu / Argenté</div>
+                    <div class="info-label" data-i18n="productDetail.coating">Revêtement</div>
+                    <div class="info-value" data-i18n="productDetail.bareSilvered">Nu / Argenté</div>
                 </div>
                 <div class="info-row">
-                    <div class="info-label">Paquet de Transport</div>
-                    <div class="info-value">carton</div>
+                    <div class="info-label" data-i18n="productDetail.transportPackage">Paquet de Transport</div>
+                    <div class="info-value" data-i18n="productDetail.carton">carton</div>
                 </div>
                 <div class="info-row">
-                    <div class="info-label">Avantages</div>
-                    <div class="info-value">Soudures propres</div>
+                    <div class="info-label" data-i18n="productDetail.advantages">Avantages</div>
+                    <div class="info-value" data-i18n="productDetail.cleanWelds">Soudures propres</div>
                 </div>
                 <div class="info-row">
-                    <div class="info-label">Diamètre</div>
+                    <div class="info-label" data-i18n="products.diameter">Diamètre</div>
                     <div class="info-value">0,8 / 1 / 1,2 mm</div>
                 </div>
             </div>
@@ -256,7 +318,8 @@
             <div class="similar-products-icon">
                 <i class="fas fa-layer-group"></i>
             </div>
-            <h2 class="similar-products-title">Trouver des produits similaires</h2>
+            <h2 class="similar-products-title" data-i18n="productDetail.findSimilarProducts">Trouver des produits
+                similaires</h2>
         </div>
 
         <div class="similar-products-grid">
@@ -265,10 +328,13 @@
                     <img alt="Soudeur MIG MMA TIG" src="images/pp1.png">
                 </div>
                 <div class="product-content">
-                    <h4 class="products-section-title">Soudeur MIG MMA TIG</h4>
-                    <p class="products-section-description">Soudeur multifonction à gaz protégé MIG MMA TIG IGBT avec
+                    <h4 class="products-section-title" data-i18n="productDetail.welderMigMmaTig">Soudeur MIG MMA
+                        TIG</h4>
+                    <p class="products-section-description" data-i18n="productDetail.welderMigMmaTigDesc">Soudeur
+                        multifonction à gaz protégé MIG MMA TIG IGBT avec
                         inverseur numérique Power Ms-200c</p>
-                    <a class="product-btn" href="./product-detail-1.html">VOIR PLUS</a>
+                    <a class="product-btn" data-i18n="productDetail.seeMore" href="./product-detail-1.html">VOIR
+                        PLUS</a>
                 </div>
             </div>
 
@@ -277,10 +343,12 @@
                     <img alt="IRON Cutting Disc T27" src="images/pp3.png">
                 </div>
                 <div class="product-content">
-                    <h4 class="products-section-title">Disque de Coupe T27</h4>
-                    <p class="products-section-description">IRON cutting disc for Metal&S.S T27 type - Cutting Disc 230
+                    <h4 class="products-section-title" data-i18n="productDetail.cuttingDiscT27">Disque de Coupe T27</h4>
+                    <p class="products-section-description" data-i18n="productDetail.cuttingDiscT27Desc">IRON cutting
+                        disc for Metal&S.S T27 type - Cutting Disc 230
                         × 3.2 × 22.23 mm</p>
-                    <a class="product-btn" href="./product-detail-3.html">VOIR PLUS</a>
+                    <a class="product-btn" data-i18n="productDetail.seeMore" href="./product-detail-3.html">VOIR
+                        PLUS</a>
                 </div>
             </div>
 
@@ -289,10 +357,13 @@
                     <img alt="IRON Flap Disc 125mm" src="images/pp5-5.png">
                 </div>
                 <div class="product-content">
-                    <h4 class="products-section-title">Disque à Lamelles 125mm</h4>
-                    <p class="products-section-description">IRON 4.5 inch flexible flap disc 125 x 22.23 mm - Disque à
+                    <h4 class="products-section-title" data-i18n="productDetail.flapDisc125">Disque à Lamelles
+                        125mm</h4>
+                    <p class="products-section-description" data-i18n="productDetail.flapDisc125Desc">IRON 4.5 inch
+                        flexible flap disc 125 x 22.23 mm - Disque à
                         lamelles en zirconium</p>
-                    <a class="product-btn" href="./product-detail-5.html">VOIR PLUS</a>
+                    <a class="product-btn" data-i18n="productDetail.seeMore" href="./product-detail-5.html">VOIR
+                        PLUS</a>
                 </div>
             </div>
 
@@ -301,10 +372,13 @@
                     <img alt="IRON Welding Wire Copper" src="images/pp7-1.png">
                 </div>
                 <div class="product-content">
-                    <h4 class="products-section-title">Fil de Soudage Cuivreux</h4>
-                    <p class="products-section-description">IRON welding wire ER70S-6 - Fil à souder MIG doré pour
+                    <h4 class="products-section-title" data-i18n="productDetail.weldingWireCopper">Fil de Soudage
+                        Cuivreux</h4>
+                    <p class="products-section-description" data-i18n="productDetail.weldingWireCopperDesc">IRON welding
+                        wire ER70S-6 - Fil à souder MIG doré pour
                         aluminium et métaux spéciaux</p>
-                    <a class="product-btn" href="./product-detail-6.html">VOIR PLUS</a>
+                    <a class="product-btn" data-i18n="productDetail.seeMore" href="./product-detail-6.html">VOIR
+                        PLUS</a>
                 </div>
             </div>
         </div>
@@ -342,42 +416,45 @@
                     <div class="logo">
                         <img alt="Logo" src="images/hedear-logo.png" style="width: 150px">
                     </div>
-                    <p class="footer-description">
+                    <p class="footer-description" data-i18n="footer.description">
                         Explorez notre gamme de produits ou contactez-nous pour obtenir des conseils personnalisés.
                     </p>
                     <div class="footer-social">
-                        <a class="social-link" href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a class="social-link" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="social-link"
+                           href="https://www.facebook.com/people/Iron-Equipement-Industriel/pfbid0wyjUP6wVyzixEU6XdVCnra2QegrPXoUKGs1g7tD2MxWXNbX1v1Tqz2bqTY1STPuUl/"
+                           target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="social-link" href="https://www.instagram.com/ironequipementindustriel"
+                           target="_blank"><i class="fab fa-instagram"></i></a>
                         <a class="social-link" href="#"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-link" href="#"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
 
                 <div class="footer-section">
-                    <h4 class="footer-title">Links</h4>
+                    <h4 class="footer-title" data-i18n="footer.linksTitle">Links</h4>
                     <ul class="footer-links">
-                        <li><a href="./about.html">À propos de nous</a></li>
-                        <li><a href="./index.html#team">Découvrez notre équipe</a></li>
-                        <li><a href="./index.html#products">Notre projet</a></li>
-                        <li><a href="./contact.html">Contact</a></li>
-                        <li><a href="./faq.html">FAQs</a></li>
+                        <li><a data-i18n="footer.aboutUs" href="./about.html">À propos de nous</a></li>
+                        <li><a data-i18n="footer.discoverTeam" href="./index.html#team">Découvrez notre équipe</a></li>
+                        <li><a data-i18n="footer.ourProject" href="./index.html#products">Notre projet</a></li>
+                        <li><a data-i18n="nav.contact" href="./contact.html">Contact</a></li>
+                        <li><a data-i18n="footer.faqs" href="./faq.html">FAQs</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h4 class="footer-title">Contact</h4>
+                    <h4 class="footer-title" data-i18n="footer.contactTitle">Contact</h4>
                     <div class="footer-contact">
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Adresse : Hammem Sousse</span>
+                            <span data-i18n="header.address">Adresse : Hammem Sousse</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
-                            <span>Tel : +216 53 348 000</span>
+                            <span data-i18n="header.phone">Tel : +216 53 348 000</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <span>Email : Contact@iron.tn</span>
+                            <span data-i18n="header.email">Email : Contact@iron.tn</span>
                         </div>
                     </div>
                 </div>
@@ -386,6 +463,8 @@
     </div>
 </footer>
 
-<script src="js/script.js"></script>
+
+<script src="js/i18n.js"></script>
+<script src="js/script.js" type="module"></script>
 </body>
 </html>
