@@ -3,7 +3,7 @@
     "home": "Home",
     "about": "About",
     "product": "Products",
-    "partners": "Parteniers",
+    "partners": "Partenaires",
     "blog": "Blog",
     "contact": "Contact"
   },
@@ -336,7 +336,7 @@
     "title": "Centre d'Aide"
   },
   "partners": {
-    "title": "Parteniers",
+    "title": "partenaires",
     "heroTitle": "Devenez partenaire de IRON",
     "heroDesc": "Nos partenaires nous accompagnent chaque jour pour garantir qualité, fiabilité et innovation dans toutes nos solutions de soudage",
     "becomePartner": "Devenir Partenaire",
